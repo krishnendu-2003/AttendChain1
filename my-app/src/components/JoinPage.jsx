@@ -36,12 +36,12 @@ const Modal = ({ isOpen, onClose, formData }) => {
 const JoinPage = () => {
   const [formData, setFormData] = useState({
     students: [
-      { name: 'Student 1', isChecked: false },
-      { name: 'Student 2', isChecked: false },
-      { name: 'Student 3', isChecked: false },
-      { name: 'Student 4', isChecked: false },
-      { name: 'Student 5', isChecked: false },
-      { name: 'Student 6', isChecked: false },
+      { name: 'Krishnendu ', isChecked: false },
+      { name: 'Matrix Roy', isChecked: false },
+      { name: 'Jishnu Assam', isChecked: false },
+      { name: 'Echo Whisper', isChecked: false },
+      { name: 'Frozen Saturn', isChecked: false },
+      { name: 'Apex Kumar', isChecked: false },
     ]
   });
 
