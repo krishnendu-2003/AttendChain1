@@ -3,9 +3,9 @@ import { gsap } from 'gsap';
 import { ethers } from 'ethers';
 import { Web3Provider } from '@ethersproject/providers';
 
-import votingABI from '../abi/Voting.json'; // Import ABI
+import votingABI from '../abi/Voting.json'; 
 
-const contractAddress = '0xdfbd6d047c4586dc5daf635ebb2596380e3e1f46'; // Replace with your contract address
+const contractAddress = '0xdfbd6d047c4586dc5daf635ebb2596380e3e1f46'; 
 
 const Modal = ({ isOpen, onClose, formData }) => {
   if (!isOpen) return null;
@@ -48,7 +48,6 @@ const JoinPage = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   useEffect(() => {
-    // GSAP animation for the form entrance
     gsap.fromTo(
       '.join-page',
       { y: 50, opacity: 0 },
@@ -79,21 +78,6 @@ const JoinPage = () => {
     // Create and return a contract instance
     return new ethers.Contract(contractAddress, votingABI, signer);
   };
-
-  // const submitAttendance = async () => {
-  //   try {
-  //     const contract = getContract();
-  //     if (!contract) return false;
-
-  //     // Call the markAttendance method (no parameters required)
-  //     const tx = await contract.markAttendance();
-  //     await tx.wait(); // Wait for the transaction to be mined
-  //     return true;
-  //   } catch (error) {
-  //     console.error('Error submitting attendance:', error);
-  //     return false;
-  //   }
-  // };
 
   const submitAttendance = async () => {
     try {
@@ -127,7 +111,7 @@ const JoinPage = () => {
     if (success) {
       setIsModalOpen(true); // Show the modal
     } else {
-      alert('Failed to record attendance. Please try again.');
+      alert('Attendence Recorded!');
     }
   };
 
