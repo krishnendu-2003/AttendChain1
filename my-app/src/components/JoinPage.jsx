@@ -38,7 +38,7 @@ const JoinPage = () => {
     students: [
       { name: 'Krishnendu ', isChecked: false },
       { name: 'Matrix Roy', isChecked: false },
-      { name: 'Jishnu Assam', isChecked: false },
+      { name: 'Jishnu Proto', isChecked: false },
       { name: 'Echo Whisper', isChecked: false },
       { name: 'Frozen Saturn', isChecked: false },
       { name: 'Apex Kumar', isChecked: false },
