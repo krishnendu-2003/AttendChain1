@@ -1,4 +1,3 @@
-// src/Navbar.js
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { gsap } from 'gsap';
@@ -8,7 +7,6 @@ const Navbar = () => {
   const [account, setAccount] = useState(null);
 
   useEffect(() => {
-    // Load Google Fonts
     const loadGoogleFonts = () => {
       const link = document.createElement('link');
       link.href = 'https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@400;600&display=swap';
@@ -18,7 +16,6 @@ const Navbar = () => {
 
     loadGoogleFonts();
 
-    // GSAP animations
     gsap.fromTo(
       '.navbar',
       { y: -100, opacity: 0 },
@@ -58,7 +55,7 @@ const Navbar = () => {
   };
 
   const handleClaimPrize = () => {
-    alert('Prize claimed successfully!'); // Replace this with actual logic for claiming the prize
+    alert('Prize claimed successfully!'); 
   };
 
   return (
@@ -67,8 +64,7 @@ const Navbar = () => {
         <span
           className="ml-3 text-3xl font-extrabold tracking-wide text-white"
           style={{
-            fontFamily: 'Poppins, sans-serif', // Changed to Poppins for a modern look
-             // Violet color for the logo text
+            fontFamily: 'Poppins, sans-serif', 
           }}
         >
           AttendChain
@@ -80,8 +76,8 @@ const Navbar = () => {
             className="font-semibold px-5 py-2 rounded-lg shadow-md transform transition-transform hover:scale-105"
             style={{
               fontFamily: 'Poppins, sans-serif',
-              backgroundColor: '#6B21A8', // Purple background for connected status
-              color: '#FFFFFF', // White text for connected status
+              backgroundColor: '#6B21A8', 
+              color: '#FFFFFF', 
             }}
           >
             Connected: {account.substring(0, 6)}...{account.substring(account.length - 4)}
@@ -92,9 +88,9 @@ const Navbar = () => {
             className="connect-button font-semibold px-6 py-3 rounded-lg shadow-xl transition-all duration-300 ease-in-out hover:scale-105"
             style={{
               fontFamily: 'Poppins, sans-serif',
-              backgroundColor: '#FFFFFF', // White background for button
-              color: '#7C3AED', // Violet text for button
-              borderColor: '#7C3AED', // Border color matching the text
+              backgroundColor: '#FFFFFF', 
+              color: '#7C3AED', 
+              borderColor: '#7C3AED', 
               borderWidth: '2px',
             }}
           >
@@ -106,8 +102,8 @@ const Navbar = () => {
           className="claim-button font-semibold px-6 py-3 rounded-lg shadow-xl transition-all duration-300 ease-in-out hover:scale-105"
           style={{
             fontFamily: 'Poppins, sans-serif',
-            backgroundColor: '#F59E0B', // Yellow background for Claim Prize button
-            color: '#FFFFFF', // White text for Claim Prize button
+            backgroundColor: '#F59E0B', 
+            color: '#FFFFFF', 
           }}
         >
           Claim Prize

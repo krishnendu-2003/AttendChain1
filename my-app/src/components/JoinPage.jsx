@@ -71,11 +71,8 @@ const JoinPage = () => {
       return null;
     }
 
-    // Create a provider
     const provider = new Web3Provider(window.ethereum);
-    // Get the signer from the provider
     const signer = provider.getSigner();
-    // Create and return a contract instance
     return new ethers.Contract(contractAddress, votingABI, signer);
   };
 
@@ -88,15 +85,13 @@ const JoinPage = () => {
         .filter(student => student.isChecked)
         .map(student => student.name);
   
-      // Check if at least one student is selected
       if (selectedStudents.length === 0) {
         alert('Please select at least one student.');
         return false;
       }
   
-      // Call the markAttendance method with the selected students
       const tx = await contract.markAttendance(selectedStudents);
-      await tx.wait(); // Wait for the transaction to be mined
+      await tx.wait();
       return true;
     } catch (error) {
       console.error('Error submitting attendance:', error);
@@ -107,9 +102,9 @@ const JoinPage = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const success = await submitAttendance(); // Submit attendance to the smart contract
+    const success = await submitAttendance(); 
     if (success) {
-      setIsModalOpen(true); // Show the modal
+      setIsModalOpen(true); 
     } else {
       alert('Attendence Recorded!');
     }

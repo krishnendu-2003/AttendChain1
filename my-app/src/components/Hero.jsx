@@ -13,11 +13,11 @@ const Hero = () => {
   }, []);
 
   const handleJoinNow = () => {
-    navigate('/join'); // Redirect to JoinPage
+    navigate('/join'); 
   };
 
   const handleInvest = () => {
-    navigate('/investors'); // Redirect to InvestorsPage
+    navigate('/investors'); 
   };
 
   return (
